@@ -5,7 +5,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.AssetManager
 import android.graphics.Color
+import android.media.AudioManager
+import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -39,6 +42,8 @@ class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
 
+    private var soundPool: SoundPool? = null
+    private val soundId = 1
 
 
     override fun onCreateView(
@@ -51,8 +56,14 @@ class DashboardFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
 //        root.button4659!!.setBackgroundResource(R.drawable.shape7215)
+
+        soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool!!.load(root.context, R.raw.switch23, 1)
+
+
         root.button4659!!.setOnClickListener {
             button4659!!.setBackgroundResource(R.drawable.shape8746)
+            playSound(root);
             checkPermission();
 //            button4659!!.setBackgroundResource(R.drawable.shape7215)
 
@@ -261,5 +272,13 @@ class DashboardFragment : Fragment() {
         val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "89020950397"))
         startActivity(intent)
     }
+
+    fun playSound(view: View) {
+        soundPool?.play(soundId, 1F, 1F, 0, 0, 1F)
+        Toast.makeText(this.context, "ОТКРЫТИЕ ШЛАГБАУМА", Toast.LENGTH_SHORT).show()
+    }
+
+
+
 
 }
