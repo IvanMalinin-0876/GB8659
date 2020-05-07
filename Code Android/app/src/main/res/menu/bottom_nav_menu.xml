@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/title2"
+        android:title="@string/title_home"
+
+
+        />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:icon="@drawable/security"
+        android:title="@string/title_dashboard"
+
+        />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/qr1234"
+        android:title="@string/title_notifications" />
+
+    <item
+        android:id="@+id/navigation_git"
+        android:icon="@drawable/www"
+        android:title="@string/title_git" />
+
+</menu>

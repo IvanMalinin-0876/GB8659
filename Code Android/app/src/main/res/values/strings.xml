@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">GB8659</string>
+    <string name="title_home">ОПИСАНИЕ</string>
+    <string name="title_dashboard">ОТКРЫТЬ</string>
+    <string name="title_notifications">ПОДЕЛИТЬСЯ</string>
+    <string name="title_git">САЙТ</string>
+
+    <string name="url_base">http://192.168.0.12:8080/dist/webid/data/User/Ivan.Malinin/home/disk%20D/andr-php-mysql/app/</string>
+    <string name="url_query">apk_query.php</string>
+
+
+<!--    таблица книги-->
+    <string name="book_card">Карточка книги</string>
+    <string name="book_num">Номер</string>
+    <string name="book_name">Название</string>
+    <string name="book_page">Количество страниц</string>
+    <string name="book_autor">Автор</string>
+<!--окна-->
+    <string name="w_error">Обновление данных</string>
+    <string name="w_save">Сохранить настройки</string>
+    <string name="w_savef">Настройки</string>
+    <string name="w_error_404">Обновление данных...</string>
+
+<!--    сообщения-->
+    <string name="msg_update">Данные обновлены</string>
+
+<!-- кнопка -->
+    <string name="action_brouser">Открыть в браузере</string>
+
+</resources>
