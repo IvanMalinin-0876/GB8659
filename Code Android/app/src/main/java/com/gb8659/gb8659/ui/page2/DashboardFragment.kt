@@ -51,7 +51,7 @@ class DashboardFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
 
-        root.button4657!!.setOnClickListener {
+        root.button4659!!.setOnClickListener {
             checkPermission();
 
 
