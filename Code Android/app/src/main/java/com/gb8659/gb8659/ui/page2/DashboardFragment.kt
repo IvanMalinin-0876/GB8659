@@ -50,10 +50,11 @@ class DashboardFragment : Fragment() {
                 ViewModelProviders.of(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
-
+//        root.button4659!!.setBackgroundResource(R.drawable.shape7215)
         root.button4659!!.setOnClickListener {
+            button4659!!.setBackgroundResource(R.drawable.shape8746)
             checkPermission();
-
+//            button4659!!.setBackgroundResource(R.drawable.shape7215)
 
        }
 

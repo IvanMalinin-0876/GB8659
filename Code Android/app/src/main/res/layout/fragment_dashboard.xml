@@ -84,7 +84,7 @@
         android:id="@+id/allert5764"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-          android:visibility="invisible"
+        android:visibility="invisible"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="32dp">
 
@@ -116,13 +116,23 @@
                         android:layout_height="168dp"
                         android:src="@drawable/security" />
 
-                    <Button
-                        android:id="@+id/button4657"
+                    <TextView
+                        android:id="@+id/textView2"
                         android:layout_width="match_parent"
-                        android:layout_height="89dp"
-                        android:background="@color/colorTransparent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center|center_horizontal"
                         android:text="ОТКРЫТЬ"
-                        android:textSize="24sp" />
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+<!--                    <Button-->
+<!--                        android:id="@+id/button4657"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="89dp"-->
+<!--                        android:background="@color/colorTransparent"-->
+<!--                        android:text="ОТКРЫТЬ"-->
+<!--                        android:textSize="24sp" />-->
                 </LinearLayout>
             </LinearLayout>
 
