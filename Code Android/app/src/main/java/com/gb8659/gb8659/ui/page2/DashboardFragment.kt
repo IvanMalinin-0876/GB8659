@@ -11,6 +11,7 @@ import android.media.AudioManager
 import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -43,6 +44,7 @@ class DashboardFragment : Fragment() {
     private lateinit var dashboardViewModel: DashboardViewModel
 
     private var soundPool: SoundPool? = null
+    private var soundPool2: SoundPool? = null
     private val soundId = 1
 
 
@@ -58,8 +60,9 @@ class DashboardFragment : Fragment() {
 //        root.button4659!!.setBackgroundResource(R.drawable.shape7215)
 
         soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
-        soundPool!!.load(root.context, R.raw.switch23, 1)
-
+        soundPool!!.load(root.context, R.raw.switch23   , 1)
+        soundPool2 = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool2!!.load(root.context, R.raw.button2345   , 1)
 
         root.button4659!!.setOnClickListener {
             button4659!!.setBackgroundResource(R.drawable.shape8746)
@@ -78,6 +81,12 @@ class DashboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        Handler().postDelayed({
+            playSound2(view);
+        }, 200)
+
 
         getQuery();
 
@@ -269,7 +278,7 @@ class DashboardFragment : Fragment() {
     }
 
     fun callPhone(){
-        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "89020950397"))
+        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "89608715926"))
         startActivity(intent)
     }
 
@@ -278,7 +287,10 @@ class DashboardFragment : Fragment() {
         Toast.makeText(this.context, "ОТКРЫТИЕ ШЛАГБАУМА", Toast.LENGTH_SHORT).show()
     }
 
-
+    fun playSound2(view: View) {
+        soundPool2?.play(soundId, 1F, 1F, 0, 0, 1F)
+//        Toast.makeText(this.context, "ОТКРЫТИЕ ШЛАГБАУМА", Toast.LENGTH_SHORT).show()
+    }
 
 
 }

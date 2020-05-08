@@ -2,8 +2,11 @@ package com.gb8659.gb8659.ui.page3
 
 import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
+import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +20,11 @@ import com.gb8659.gb8659.R
 import kotlinx.android.synthetic.main.fragment_notifications.view.*
 
 class NotificationsFragment : Fragment() {
+
+    private var soundPool: SoundPool? = null
+    private var soundPool2: SoundPool? = null
+    private var soundPool3: SoundPool? = null
+    private val soundId = 1
 
     var closeAlert1 : MutableLiveData<Boolean> = MutableLiveData<Boolean>()
     private lateinit var notificationsViewModel: NotificationsViewModel
@@ -47,6 +55,9 @@ class NotificationsFragment : Fragment() {
 
 
         root.button5626!!.setOnClickListener {
+            Handler().postDelayed({
+                playSound3(root);
+            }, 200)
             openlink();
         }
 
@@ -65,10 +76,35 @@ class NotificationsFragment : Fragment() {
 //            }
 //        }
 
+        soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool!!.load(root.context, R.raw.switch23   , 1)
+        soundPool2 = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool2!!.load(root.context, R.raw.button6543   , 1)
+        soundPool3 = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool3!!.load(root.context, R.raw.button6543   , 1)
 
         return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        Handler().postDelayed({
+            playSound2(view);
+        }, 200)
+    }
+
+
+    fun playSound2(view: View) {
+        soundPool2?.play(soundId, 1F, 1F, 0, 0, 1F)
+//        Toast.makeText(this.context, "ОТКРЫТИЕ ШЛАГБАУМА", Toast.LENGTH_SHORT).show()
+    }
+
+    fun playSound3(view: View) {
+        soundPool3?.play(soundId, 1F, 1F, 0, 0, 1F)
+//        Toast.makeText(this.context, "ОТКРЫТИЕ ШЛАГБАУМА", Toast.LENGTH_SHORT).show()
+    }
 
     fun openlink(){
 

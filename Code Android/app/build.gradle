@@ -10,8 +10,8 @@ android {
         applicationId 'com.gb8659'
         minSdkVersion 28
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.4"
+        versionCode 9
+        versionName '1.8'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

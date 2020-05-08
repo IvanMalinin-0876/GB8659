@@ -24,21 +24,12 @@
             android:background="@drawable/shape7215"
             android:visibility="visible">
 
-            <ScrollView
+            <ImageView
+                android:id="@+id/imageView2345"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:src="@drawable/qw4577" />
 
-                <WebView
-                    android:id="@+id/webview7653"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="8dp"
-                    tools:layout_editor_absoluteY="8dp">
-
-                </WebView>
-            </ScrollView>
         </FrameLayout>
 
         <LinearLayout
@@ -56,16 +47,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button6533"
-                    android:layout_width="107dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/previous" />
-
-                <Button
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -76,14 +57,16 @@
                     android:background="?attr/selectableItemBackground" />
 
                 <Button
-                    android:id="@+id/button2853"
-                    android:layout_width="107dp"
-                    android:layout_height="35dp"
+                    android:id="@+id/button2564"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/next" />
+                    android:background="@drawable/shape7643"
+                    android:text="@string/action_brouser"
+
+                    />
 
                 <Button
                     android:id="@+id/button4"
@@ -94,18 +77,6 @@
                     android:layout_marginBottom="6dp"
                     android:layout_weight="1"
                     android:background="?attr/selectableItemBackground" />
-
-                <Button
-                    android:id="@+id/button2564"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp"
-                    android:background="@drawable/shape7643"
-                    android:text="@string/action_brouser"
-
-                    />
 
             </LinearLayout>
 

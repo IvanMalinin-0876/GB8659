@@ -4,7 +4,7 @@ class DataStorage() {
 
     fun url_git():String{
 
-        var data:String = "http://yujbs.com"
+        var data:String = "https://yandex.ru/maps/10951/volzhskiy/?l=sat%2Cskl&ll=44.777214%2C48.779356&source=constructorLink&z=19"
         return data
     }
 
@@ -15,7 +15,7 @@ class DataStorage() {
     }
 
     fun url_site():String{
-        var data:String = "http://yujbs.com/"
+        var data:String = "https://play.google.com/store/apps/details?id=com.gb8659"
             //"http://213.226.112.96/prj/F6547/index.html"
         return data
     }

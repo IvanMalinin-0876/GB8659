@@ -1,6 +1,9 @@
 package com.gb8659.gb8659.ui.page1
 
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +24,13 @@ import org.json.JSONObject
 
 class HomeFragment : Fragment() {
 
+
+
+    private var soundPool: SoundPool? = null
+    private var soundPool2: SoundPool? = null
+    private val soundId = 1
+
+
     var liveData : MutableLiveData<JSONObject> = MutableLiveData<JSONObject>()
     private lateinit var homeViewModel: HomeViewModel
     override fun onCreateView(
@@ -35,11 +45,25 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
 
         })
+
+
+        soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool!!.load(root.context, R.raw.switch23   , 1)
+        soundPool2 = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool2!!.load(root.context, R.raw.button6543  , 1)
+
+
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Handler().postDelayed({
+            playSound2(view);
+        }, 200)
+
+
         getQuery();
         liveData.observe(this, object: Observer<JSONObject> {
             override fun onChanged(json: JSONObject?) {
@@ -87,6 +111,11 @@ class HomeFragment : Fragment() {
                 resp = ""
             })
         queue.add(stringReq)
+    }
+
+    fun playSound2(view: View) {
+        soundPool2?.play(soundId, 1F, 1F, 0, 0, 1F)
+//        Toast.makeText(this.context, "ОТКРЫТИЕ ШЛАГБАУМА", Toast.LENGTH_SHORT).show()
     }
 
 }

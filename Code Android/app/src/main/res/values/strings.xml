@@ -3,7 +3,7 @@
     <string name="title_home">ОПИСАНИЕ</string>
     <string name="title_dashboard">ОТКРЫТЬ</string>
     <string name="title_notifications">ПОДЕЛИТЬСЯ</string>
-    <string name="title_git">САЙТ</string>
+    <string name="title_git">КАРТА</string>
 
     <string name="url_base">http://192.168.0.12:8080/dist/webid/data/User/Ivan.Malinin/home/disk%20D/andr-php-mysql/app/</string>
     <string name="url_query">apk_query.php</string>
